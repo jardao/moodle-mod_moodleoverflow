@@ -1829,8 +1829,6 @@ function moodleoverflow_count_discussions($moodleoverflow, $course) {
 }
 
 
-
-// @mfernandriu modifications
 function moodleoverflow_update_user_grade($moodleoverflow,$postuserrating,$postinguser){
 
     // check wheter moodleoverlfow object has the added params

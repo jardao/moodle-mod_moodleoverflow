@@ -92,11 +92,8 @@ function moodleoverflow_supports($feature) {
             return true;
         case FEATURE_BACKUP_MOODLE2:
             return true;
-
-        // @mfernandriu modifications
         case FEATURE_GRADE_HAS_GRADE:
             return true;
-
         default:
             return null;
     }
@@ -191,7 +188,6 @@ function moodleoverflow_update_instance(stdClass $moodleoverflow, mod_moodleover
     // Update the moodleoverflow instance in the database.
     $result = $DB->update_record('moodleoverflow', $moodleoverflow);
 
-    // @mfernandriu modifications
     // Update all grades
     moodleoverflow_update_all_grades($moodleoverflow->id);
 
@@ -1102,7 +1098,6 @@ function moodleoverflow_can_create_attachment($moodleoverflow, $context) {
 }
 
 /**
- * mfernandriu modifications
  * Obtain grades from plugin's database tab
  *
  * @param stdClass $moodleoverlfow moodleoverflow object
